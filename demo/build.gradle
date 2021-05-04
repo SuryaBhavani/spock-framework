@@ -1,0 +1,27 @@
+plugins {
+	
+	id 'groovy'
+}
+
+group = 'com.suryabhavani'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	testImplementation group: 'org.spockframework', name: 'spock-spring', version: '2.0-M5-groovy-3.0'
+	testImplementation group: 'org.spockframework', name: 'spock-core', version: '2.0-M5-groovy-3.0'
+	testmplementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.0', ext:'pom'
+	
+	
+}
+
+test {
+	useJUnitPlatform()
+}
